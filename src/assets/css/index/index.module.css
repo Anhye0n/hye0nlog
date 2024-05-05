@@ -1,0 +1,190 @@
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.top-container-item {
+    height: 100%;
+}
+
+
+.black-overlay {
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding-left: 20%;
+    padding-right: 20%;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    color: #ffffff;
+    text-align: center;
+}
+
+.black-overlay hr {
+    animation: fadein 2s ease-in;
+    animation-delay: 3.5s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    width: 10%;
+}
+
+.first-item {
+    flex: 2 1 0;
+    background: url("@/assets/images/background/DSC01260.jpg") center center no-repeat;
+    background-size: cover;
+    transition: all 0.2s ease-in-out; /* 부드러운 전환 효과 */
+    position: relative;
+    overflow: hidden; /* 배경 확대 시 컨테이너 밖으로 나가지 않도록 설정 */
+}
+
+.first-item:hover {
+    transition: background-position 0.2s ease-in-out; /* 부드러운 전환 효과 */
+    background-position: 0.1vw;
+}
+
+.first-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0); /* 초기 상태에서는 투명 */
+    transition: background-color 0.2s ease-in-out; /* 부드러운 색상 전환 */
+}
+
+.first-item:hover::before {
+    background-color: rgba(0, 0, 0, 0.5); /* 마우스 호버 시 검은색 필터 적용 */
+}
+
+.item-title p {
+    margin-top: 90px;
+    font-family: 'NotoSansKR-Medium-5', serif;
+    font-size: 5rem;
+    margin-bottom: 5px;
+    animation: fadein 2s ease-in;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+.item-explain p {
+    font-size: 1.2rem;
+    margin-top: 5px;
+    animation: fadein 2s ease-in;
+    animation-delay: 4s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+.second-item {
+    flex: 1 1 0;
+    min-width: 384px;
+}
+
+
+.index-contents {
+    transition: 0.3s;
+    height: calc(100% - 70px);
+    padding-top: 70px;
+    color: #ffffff;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.top-logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -50px;
+}
+
+.top-logo img{
+    width: 200px;
+    display: block;
+}
+
+.top-intro {
+    margin-top: 40px;
+    height: 70px;
+}
+
+.top-intro span {
+    font-family: 'continuous', serif;
+    font-size: 3vw;
+}
+
+.middle-intro p {
+    font-family: 'iceJaram-Rg', serif;
+    font-size: 1.4vw;
+    animation: fadein 2s ease-in;
+    animation-delay: 2.5s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+.bottom-menu {
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    opacity: 0;
+    animation: fadein 2s ease-in;
+    animation-delay: 2.5s;
+    animation-fill-mode: forwards;
+}
+
+.bottom-menu img{
+    cursor: pointer;
+    display: block;
+    width: 30px;
+    filter: invert(99%) sepia(0%) saturate(5742%) hue-rotate(143deg) brightness(111%) contrast(101%);
+}
+
+.third-item {
+    flex: 2 1 0;
+    /*background: url("@/assets/images/background/DSC03891.jpg") center center no-repeat;*/
+    background: url("@/assets/images/background/DSC03870.jpg") center center no-repeat;
+    background-size: cover;
+    transition: all 0.2s ease-in-out; /* 부드러운 전환 효과 */
+    position: relative;
+    overflow: hidden; /* 배경 확대 시 컨테이너 밖으로 나가지 않도록 설정 */
+}
+
+.third-item:hover {
+    transition: background-position 0.2s ease-in-out; /* 부드러운 전환 효과 */
+    background-position: -0.1vw;
+}
+
+.third-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0); /* 초기 상태에서는 투명 */
+    transition: background-color 0.2s ease-in-out; /* 부드러운 색상 전환 */
+}
+
+.third-item:hover::before {
+    background-color: rgba(0, 0, 0, 0.5); /* 마우스 호버 시 검은색 필터 적용 */
+}
+
+@keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

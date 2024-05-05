@@ -1,0 +1,60 @@
+html,
+body,
+#root {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0.03px;
+    font-size: 16px;
+    font-family: 'NotoSansKR-Regular-4', serif;
+    /*background: #eeedf0;*/
+    /*070d0f*/
+    /*#121a1e*/
+    background: linear-gradient(#121a1e, #070d0f);
+    overflow-x: hidden;
+    user-select: none;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+input {
+}
+
+input:focus {
+    outline: none;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+@keyframes moveUpDown {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+.animated {
+    animation: moveUpDown 1s infinite;
+}
+
+.Typewriter__cursor{
+    position: absolute;
+    margin-top: -20px;
+    font-size: 4rem;
+}
