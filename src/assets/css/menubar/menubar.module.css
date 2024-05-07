@@ -48,6 +48,12 @@
     color: #d7d7d7;
 }
 
+.outlet-container {
+    width: 100%;
+    height: calc(100% - 70px);
+    margin-top: 70px;
+}
+
 @media (max-width: 600px) {
     .container {
         display: none;

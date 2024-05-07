@@ -34,13 +34,29 @@
     width: 10%;
 }
 
+.black-overlay-2{
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    color: #ffffff;
+    text-align: center;
+}
+
 .first-item {
-    flex: 2 1 0;
+    cursor: pointer;
+    flex: 3 1 0;
+    margin-right: -10px;
     background: url("@/assets/images/background/DSC01260.jpg") center center no-repeat;
+    clip-path: polygon(0 0, 100% 0%, 79% 100%, 0% 100%);
     background-size: cover;
     transition: all 0.2s ease-in-out; /* 부드러운 전환 효과 */
     position: relative;
     overflow: hidden; /* 배경 확대 시 컨테이너 밖으로 나가지 않도록 설정 */
+    z-index: 2;
 }
 
 .first-item:hover {
@@ -85,9 +101,13 @@
 
 .second-item {
     flex: 1 1 0;
-    min-width: 384px;
+    min-width: 500px;
+    /*background: url("@/assets/images/background/DSC00852.jpg") center center no-repeat;*/
+    /*background-size: cover;*/
+    background: none;
+    margin-left: -115px;
+    margin-right: -115px;
 }
-
 
 .index-contents {
     transition: 0.3s;
@@ -101,14 +121,15 @@
     flex-direction: column;
 }
 
-.top-logo{
+.top-logo {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: -50px;
+    z-index: 1;
 }
 
-.top-logo img{
+.top-logo img {
     width: 200px;
     display: block;
 }
@@ -116,6 +137,7 @@
 .top-intro {
     margin-top: 40px;
     height: 70px;
+    z-index: 1;
 }
 
 .top-intro span {
@@ -143,7 +165,7 @@
     animation-fill-mode: forwards;
 }
 
-.bottom-menu img{
+.bottom-menu img {
     cursor: pointer;
     display: block;
     width: 30px;
@@ -151,7 +173,9 @@
 }
 
 .third-item {
-    flex: 2 1 0;
+    cursor: pointer;
+    flex: 3 1 0;
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 20% 100%);
     /*background: url("@/assets/images/background/DSC03891.jpg") center center no-repeat;*/
     background: url("@/assets/images/background/DSC03870.jpg") center center no-repeat;
     background-size: cover;

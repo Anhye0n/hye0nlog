@@ -7,45 +7,55 @@ import logo from '@/assets/images/logo/webp/w_logo.webp'
 import home from '@/assets/images/menu/home-line.svg'
 import github from '@/assets/images/menu/github-fill.svg'
 import instagram from '@/assets/images/menu/instagram-line.svg'
+import user from '@/assets/images/menu/user-line.svg'
+
 import { useNavigate } from 'react-router-dom'
 
 function Index() {
-
     const navigate = useNavigate()
 
     return (
         <div className={styles['container']}>
-            <div className={`${styles['top-container-item']} ${styles['first-item']}`}>
+            <div
+                className={`${styles['top-container-item']} ${styles['first-item']}`}
+                onClick={() => navigate('/gallery')}
+            >
                 <BlackOverlay title="GALLERY" explain="날짜순으로 정렬된 사진들을 감상하실 수 있습니다." />
             </div>
             <div className={`${styles['top-container-item']} ${styles['second-item']}`}>
-                <div className={styles['index-contents']}>
-                    <div className={styles['top-logo']}>
-                        <img src={logo} alt="logo" />
-                    </div>
-                    <div className={styles['top-intro']}>
-                        <Typewriter
-                            onInit={(typewriter) => {
-                                typewriter.typeString(`<span>Anhye0n Blog</span>`)
-                                    .pauseFor(250)
-                                    .start()
-                            }}
-                        />
-                    </div>
-                    <div className={styles['middle-intro']}>
-                        <p>{`"사진 좋아하는 백엔드 개발자의 기록"`}</p>
-                    </div>
+                {/*<div className={styles['black-overlay-2']}>*/}
+                    <div className={styles['index-contents']}>
+                        <div className={styles['top-logo']}>
+                            <img src={logo} alt="logo" />
+                        </div>
+                        <div className={styles['top-intro']}>
+                            <Typewriter
+                                onInit={(typewriter) => {
+                                    typewriter.typeString(`<span>Anhye0n Blog</span>`).pauseFor(250).start()
+                                }}
+                            />
+                        </div>
+                        <div className={styles['middle-intro']}>
+                            <p>{`"사진 좋아하는 백엔드 개발자의 기록"`}</p>
+                        </div>
 
-                    <div className={styles['bottom-menu']}>
-                        <img src={home} alt="home" onClick={() => navigate('/')} />
-                        <img src={github} alt="github" onClick={() => window.open('https://github.com/anhye0n')} />
-                        <img src={instagram} alt="instagram"
-                             onClick={() => window.open('https://www.instagram.com/stable_hyeon01')} />
+                        <div className={styles['bottom-menu']}>
+                            <img src={home} alt="home" onClick={() => navigate('/')} />
+                            <img src={github} alt="github" onClick={() => window.open('https://github.com/anhye0n')} />
+                            <img
+                                src={instagram}
+                                alt="instagram"
+                                onClick={() => window.open('https://www.instagram.com/stable_hyeon01')}
+                            />
+                            <img src={user} alt="about" onClick={() => navigate('/about')} />
+                        </div>
                     </div>
-
-                </div>
+                {/*</div>*/}
             </div>
-            <div className={`${styles['top-container-item']} ${styles['third-item']}`}>
+            <div
+                className={`${styles['top-container-item']} ${styles['third-item']}`}
+                onClick={() => navigate('/tags')}
+            >
                 <BlackOverlay title="TAGS" explain="태그별로 분류된 사진들을 감상하실 수 있습니다." />
             </div>
         </div>
